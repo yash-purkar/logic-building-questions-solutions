@@ -25,15 +25,29 @@ console.log(addNmbers(num1, num2, num3, num4, num5));*/
 console.log(oddOrEven(10));*/
 
 //3️⃣ Write a program to find the maximum and minimum out of two given numbers. The numbers are num1=129 and num2=251.
-const minMax = (num1, num2) => {
+
+/*const minMax = (num1, num2) => {
   if (num1 > num2) return `${num1} is greater than ${num2}`
   else if (num1 === num2) return `${num1} and ${num2} are equals`
   else return `${num2} is greater than ${num1}`;
 }
-console.log(minMax(15, 5));
+console.log(minMax(15, 5));*/
 
-// Write a program to find the maximum out of three given numbers. The numbers are num1=8, num2=23 and num3=17.
+// 4️⃣ Write a program to find the maximum out of three given numbers. The numbers are num1=8, num2=23 and num3=17.
+const max = (num1, num2, num3) => {
 
+  if (num1 > num2 && num1 > num3) {
+    return num1 + " is Maximum number";
+  }
+  else if (num2 > num1 && num2 > num3) {
+    return num2 + " is Maximum number";
+  }
+  else {
+    return num3 + " is Maximum number";
+  }
+}
+
+console.log(max(1052, 52, 320));
 // Write a program to find the minimum out of three given numbers. The numbers are num1=35, num2=29 and num3=46.
 
 // Write program to take a month as an input from the user and find out whether the month has 31 days or not.
