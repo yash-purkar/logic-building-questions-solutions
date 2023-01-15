@@ -1,5 +1,5 @@
 // 1️⃣ Write a program to add 5 numbers. The value of numbers are num1=5, num2=13, num3=7, num4=21 and num5=48.
-let num1 = 5;
+/*let num1 = 5;
 let num2 = 13;
 let num3 = 7;
 let num4 = 21;
@@ -12,9 +12,17 @@ function addNmbers(...numbers) {
   })
   return sum;
 }
-console.log(addNmbers(num1, num2, num3, num4, num5));
+console.log(addNmbers(num1, num2, num3, num4, num5));*/
 
-// Write a program to take a number input from user and determine whether the number is odd or even.
+// 2️⃣ Write a program to take a number input from user and determine whether the number is odd or even.
+const oddOrEven = (num) => {
+  if (num % 2 === 0) {
+    return "Number is even";
+  }
+  return "Number is odd"
+}
+
+console.log(oddOrEven(10))
 
 // Write a program to find the maximum and minimum out of two given numbers. The numbers are num1=129 and num2=251.
 
