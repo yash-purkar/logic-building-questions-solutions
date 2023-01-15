@@ -51,7 +51,7 @@ console.log(max(8,23,17));*/
 
 // 5️⃣ Write a program to find the minimum out of three given numbers. The numbers are num1=35, num2=29 and num3=46.
 
-const min = (num1, num2, num3) => {
+/*const min = (num1, num2, num3) => {
   if (num1 < num2 && num1 < num3) {
     return num1 + " is minimum"
   }
@@ -63,9 +63,27 @@ const min = (num1, num2, num3) => {
   }
 }
 
-console.log(min(3, 29, 1));
+console.log(min(3, 29, 1));*/
 
-// Write program to take a month as an input from the user and find out whether the month has 31 days or not.
+// 6️⃣ Write program to take a month as an input from the user and find out whether the month has 31 days or not.
+
+const daysCounter = (month) => {
+  let lMonth = month.toLowerCase();
+  if (lMonth === "january" || lMonth === "march" || lMonth === "may" || lMonth === "july" || lMonth === "august" || lMonth === "octomber" || lMonth === "december") {
+    return month + " has 31 Days";
+  }
+  else if (month === "february") {
+    return month + " has 28 Days";
+  }
+  else {
+    return month + " has 30 Days";
+  }
+}
+
+let check = daysCounter("march");
+console.log(check);
+
+
 
 // Intermediate
 // Fizzbuzz - Write a program to return an array from 1 to 100. But for every multiple of 3, replace the number with "Fizz", for every multiple of 5, replace the number with "Buzz" and for every multiples of 3 & 5, replace with "FizzBuzz".
