@@ -99,6 +99,29 @@ let check = daysCounter("march");
 console.log(check);
 
 
+// Q6
+const monthDaysCounter = (month) => { //3 //4
+  if (month <= 7) {  // 3< 7 t | 4<7 t //f
+    if (month === 2) { //f f
+      return "Month consist of 28 days"
+    } else if (month % 2 === 0) { //3%2 =1 1==0 f | 4%2=0
+      return "Month consist of 30 days"
+    } else {
+      return "Month consist of 31 days"
+    }
+  } else if (month <= 12) {  //t
+    if (month % 2 === 0) {  //f
+      return "Month consist of 31 days"
+    } else {
+      return "Month consist of 30 days"
+    }
+  } else {
+    return "Please enter month number between 1 to 12 only..."
+  }
+}
+
+console.log(monthDaysCounter(11))
+
 
 // Intermediate
 // Fizzbuzz - Write a program to return an array from 1 to 100. But for every multiple of 3, replace the number with "Fizz", for every multiple of 5, replace the number with "Buzz" and for every multiples of 3 & 5, replace with "FizzBuzz".
