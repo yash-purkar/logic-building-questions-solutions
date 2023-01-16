@@ -24,6 +24,21 @@ console.log(addNmbers(num1, num2, num3, num4, num5));*/
 
 console.log(oddOrEven(10));*/
 
+
+// Minimum 
+/*function min(...numbers) {
+  let min = numbers[0];
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] < min) {
+      min = numbers[i];
+    }
+  }
+  return min;
+}
+
+console.log(min(200, 30, 100, 40, 500, 99));*/
+
+
 //3️⃣ Write a program to find the maximum and minimum out of two given numbers. The numbers are num1=129 and num2=251.
 
 /*const minMax = (num1, num2) => {
