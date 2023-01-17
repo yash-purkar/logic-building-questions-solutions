@@ -2,6 +2,7 @@
 
 // 1️⃣ Fizzbuzz - Write a program to return an array from 1 to 100. But for every multiple of 3, replace the number with "Fizz", for every multiple of 5, replace the number with "Buzz" and for every multiples of 3 & 5, replace with "FizzBuzz".
 
+// solution 1
 /*let numbers = [];
 for (let i = 1; i <= 100; i++) {
   numbers.push(i);
@@ -47,6 +48,7 @@ console.log(numbers);*/
 // * * *
 // * * * *
 // * * * * *
+// solution1
 /*for (let i = 0; i < 5; i++) { // rows
   for (let j = 0; j <= i; j++) { //columns
     document.write("*");
@@ -54,6 +56,18 @@ console.log(numbers);*/
   document.write("<br/>");
 }*/
 
+/*
+solution 2
+let str =""; //""
+for(let i=0; i<5;i++) {//row 0<5  1<5
+    for(let j=0; j<=i ; j++){ //0<=0 * 1<=1 t*
+        str+="*"
+    }
+    str+="\n";
+}
+
+console.log(str);
+*/
 
 // 3️⃣ Write a program to take a number input from user and print multiplication table 12 times for that number.
 
@@ -71,7 +85,24 @@ multiplication(5);*/
 
 
 
-// Write a program to return a Fibonacci series : 0,1,1,2,3,5,8,13,21....
+// 4️⃣ Write a program to return a Fibonacci series : 0,1,1,2,3,5,8,13,21....
+
+function fibonacciSeries(num) { //upto index 10 of result array
+  let a = 0; let b = 1; let result = [];
+  let c;
+  result.push(a, b); //result[0,1]
+  while (result.length < num) { //2<10 Tr | 3<10 Tr
+    c = a + b; // c=0+1=1 | c=1+1=2
+    result.push(c); //result[0,1,1] | result[0,1,1,2]
+
+    a = b; // a = 1 | a = 1
+    b = c; // b= 1 | b =2     and so on
+  }
+  return result;
+}
+console.log(fibonacciSeries(10));
+
+
 
 // Write a program to take an input from a user and find its Factorial. Example: Factorial of 5 is 120
 
@@ -79,11 +110,4 @@ multiplication(5);*/
 
 // Write a program to take a day as an input and determine whether it is a weekday or weekend. Example: Tuesday is weekday.
 
-
-// Fizzbuzz - Write a program to return an array from 1 to 100. But for every multiple of 3, replace the number with "Fizz", for every multiple of 5, replace the number with "Buzz" and for every multiples of 3 & 5, replace with "FizzBuzz".
-
-let numbers = [];
-for (let i = 1; i <= 100; i++) {
-  numbers.push(i);
-}
 
