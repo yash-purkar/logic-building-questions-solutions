@@ -105,6 +105,20 @@ console.log(fibonacciSeries(10));
 
 
 // Write a program to take an input from a user and find its Factorial. Example: Factorial of 5 is 120
+// factorial means => 5 × 4 × 3 × 2 × 1 = 120.
+// n = 5*4*3*2*1
+
+function factorial(n) { //5
+  let fact = 1;
+  for (let i = n; i >= 1; i--) {//5>=1 T|4>=1 T|3>=1 T|2>=1 T|1>=1 T| 0>=1 F ->return
+    fact = fact * i;//fact=1*5=5|fact=5*4=20|fact=20*3=60|fact=60*2=120|fact=120*1=120
+  }
+  return `Factorial of ${n} is ${fact}`;
+}
+console.log(factorial(5));
+/*I took 1 in fact bcz If I take 0 here then 1*0=0, 2*0=0 we don't want that so we took 1.
+//     //another reason for 1st time we want to multiply the "n" by 1 so n will be still n. suppose n is 5 then 1st it will 1*5=5 so then I can multiply next number 5*4 ......*/
+
 
 // Write a Program to take a number input from user and find if the number is Prime or not.
 
