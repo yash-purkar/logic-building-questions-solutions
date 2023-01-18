@@ -116,11 +116,35 @@ function factorial(n) { //5
   return `Factorial of ${n} is ${fact}`;
 }
 console.log(factorial(5));
+// We define fact bcz we have to store the factorial somewhere,
+// 5*4 ki fact mai again 20*3 fact mai 60*2 fact mai 120*1
+
 /*I took 1 in fact bcz If I take 0 here then 1*0=0, 2*0=0 we don't want that so we took 1.
-//     //another reason for 1st time we want to multiply the "n" by 1 so n will be still n. suppose n is 5 then 1st it will 1*5=5 so then I can multiply next number 5*4 ......*/
+
+// So if we multiply by 1 the the multiplication will be that number.
+// If doesn't put any value inside fact , then for 1st time nothing to multiply with i
+//another reason for 1st time we want to multiply the "n" by 1 so n will be still n. suppose n is 5 then 1st it will 1*5=5 so then I can multiply next number 5*4 ......*/
 
 
 // Write a Program to take a number input from user and find if the number is Prime or not.
+
+function checkPrime(n) {
+  let flag = 0;
+  for (let i = 2; i < n; i++) {
+    if (n % i == 0) {
+      flag = 1;
+    }
+  }
+  if (flag == 1) {
+    console.log("not prime")
+  }
+  else {
+    console.log("prime")
+  }
+}
+checkPrime(7);
+
+// We start loop from 2 and end at n-1, because prime number is only divisible by 1 and itself , so if except this any number is divisible then it is not prime number.
 
 // Write a program to take a day as an input and determine whether it is a weekday or weekend. Example: Tuesday is weekday.
 
