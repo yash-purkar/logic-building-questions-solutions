@@ -148,4 +148,24 @@ checkPrime(7);
 
 // Write a program to take a day as an input and determine whether it is a weekday or weekend. Example: Tuesday is weekday.
 
+// solution 1
 
+function checkDay(day) {
+  if (day.toLowerCase() == "saturday" || day.toLowerCase() == "sunday") {
+    console.log(day, "is a weekend");
+  }
+  else console.log(day, " is a weekday")
+}
+
+checkDay("sdunday");
+
+
+// solution2
+
+function checkDay(day) {
+  if (day[0] !== "s") {
+    return `${day} is a weekDay`
+  }
+  else return `${day} is a weekEnd`
+}
+console.log(checkDay("saturday"));
