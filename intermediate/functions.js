@@ -76,21 +76,55 @@ console.log(replaceElems([1, 5, 3, 5, 6, 8], 5, 10))*/
 // Input: charAt("neoGcamp", 4) ––> Output: c
 
 // Solution 1
-function findChar(str, ind) {
+/*function findChar(str, ind) {
   return str.charAt(ind)
-}
+}*/
 
 // Solution2
-function findChar(str, ind) {
+/*function findChar(str, ind) {
   if (str[ind]) {
     return str[ind]
   }
   else return "Unvalid ID"
 }
-console.log(findChar("neoGcamp", 6));
+console.log(findChar("neoGcamp", 6));*/
 
 
 
 // 6️⃣Given two dates, your function should return which one comes before the other.
 // Example:
 // Input: minDate('02/05/2021', '24/01/2021') ––> Output: 24/01/2021
+
+function checkMinDate(date1, date2) {
+  // console.log(date1, date2);
+  let newDate1 = date1.split("/")
+  let newDate2 = date2.split("/")
+  //  console.log(newDate1, newDate2);
+  //[ '02', '05', '2021' ] [ '24', '01', '2021' ]
+
+  if (newDate1[2] > newDate2[2]) {
+    return date2;
+  }
+  else if (newDate1[2] === newDate1[2]) {
+    if (newDate1[1] > newDate2[1]) {
+      return date2;
+    }
+    else if (newDate1[1] === newDate2[1]) {
+      if (newDate1[0] > newDate2[0]) {
+        return date2;
+      }
+      else {
+        return date1;
+      }
+    }
+    else {
+      return date1;
+    }
+  }
+  else {
+    return date1;
+  }
+
+}
+
+console.log(checkMinDate('02/05/2021', '24/01/2021'))
