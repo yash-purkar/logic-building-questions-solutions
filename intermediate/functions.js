@@ -102,16 +102,24 @@ function checkMinDate(date1, date2) {
   //  console.log(newDate1, newDate2);
   //[ '02', '05', '2021' ] [ '24', '01', '2021' ]
 
-  if (newDate1[2] > newDate2[2]) {
-    return date2;
+  if (date1 === date2) {
+    return "Dates are same"
   }
-  else if (newDate1[2] === newDate1[2]) {
-    if (newDate1[1] > newDate2[1]) {
+  else {
+    if (newDate1[2] > newDate2[2]) {
       return date2;
     }
-    else if (newDate1[1] === newDate2[1]) {
-      if (newDate1[0] > newDate2[0]) {
+    else if (newDate1[2] === newDate1[2]) {
+      if (newDate1[1] > newDate2[1]) {
         return date2;
+      }
+      else if (newDate1[1] === newDate2[1]) {
+        if (newDate1[0] > newDate2[0]) {
+          return date2;
+        }
+        else {
+          return date1;
+        }
       }
       else {
         return date1;
@@ -121,10 +129,6 @@ function checkMinDate(date1, date2) {
       return date1;
     }
   }
-  else {
-    return date1;
-  }
-
 }
 
-console.log(checkMinDate('02/05/2021', '24/01/2021'))
+console.log(checkMinDate('02/03/2021', '02/05/2021'))
