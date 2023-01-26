@@ -81,9 +81,51 @@ The substr() method does not change the original string.
 function ascendingArr(arr) {
   return arr.sort((a, b) => a - b);
 }
-console.log(ascendingArr([100, 83, 32, 9, 45, 61]))
+// console.log(ascendingArr([100, 83, 32, 9, 45, 61]));
 
 
 // 4️⃣Given a sentence, your function should reverse the order of characters in each word, keeping same sequence of words.
 // Example:
 // Input: reverseCharactersOfWord('we are neoGrammers') –––> Output: ew era sremmarGoen
+function reverseCharactersOfWord(str) {
+  return console.log(str.split("").reverse().join("").split(" ").reverse().join(" "))
+}
+reverseCharactersOfWord("we are neoGrammers")
+
+/*
+    1. str.split("")
+    => [
+  'w', 'e', ' ', 'a', 'r',
+  'e', ' ', 'n', 'e', 'o',
+  'G', 'r', 'a', 'm', 'm',
+  'e', 'r', 's'
+]
+
+2. str.split("").reverse()
+=> [
+  's', 'r', 'e', 'm', 'm',
+  'a', 'r', 'G', 'o', 'e',
+  'n', ' ', 'e', 'r', 'a',
+  ' ', 'e', 'w'
+]
+
+3. str.split("").reverse().join("")
+=> sremmarGoen era ew
+
+
+4. str.split("").reverse().join("").split(" ")
+=> [ 'sremmarGoen', 'era', 'ew' ]
+
+
+5. str.split("").reverse().join("").split(" ").reverse()
+=> [ 'ew', 'era', 'sremmarGoen' ]
+
+
+
+
+*/
+
+/*function reverseSentence(str) {
+    return console.log(str.split("").reverse().join("").split("").join("").split(" ").reverse().join(" "))
+}
+reverseSentence("I am yash") */
