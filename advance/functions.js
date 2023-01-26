@@ -42,7 +42,7 @@ function capitalize(sentence) {
   // In the above code, every word is taken separately. Then it capitalizes the first letter, and in the end, it concatenates the capitalized first letter with the rest of the string.
   // E.G If we take "neogCamp" as an example,
   // it looks like this neogCamp = N + eogCamp
-  // console.log(words)
+  console.log(words)
 
   // 🛑
   //  Now we'll join all the words to form a sentence.
@@ -52,7 +52,7 @@ function capitalize(sentence) {
 
   //In the above code snippet, we can see the join method in action. We call it on the words array, and we specify the separator, which in our case is a space.
 
-  // Therefore, [ 'We', 'Are', 'NeoGrammers' ] becomes We Are NeoGrammers 
+  // Therefore, [ 'We', 'Are', 'NeoGrammers' ] becomes "We Are NeoGrammers"
 }
 
 console.log(capitalize("we are neoGrammers"))
