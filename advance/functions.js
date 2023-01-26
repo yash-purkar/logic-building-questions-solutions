@@ -25,24 +25,53 @@ getSecretCode("Yash");*/
 // Example:
 // Input: toSentenceCase('we are neoGrammers') ––> Output: We Are NeoGrammers
 
-//Capitalize word
+
+// Capitalize first letter of each letter in a sentence
 function capitalize(sentence) {
-  let low = sentence.toLowerCase();
-  let cap = sentence.charAt(0).toUpperCase() + low.slice(1, sentence.length)
-  console.log(cap);
+  let words = sentence.split(" ");
+  // we take is to split the sentence into an array of words. 
+  //So we can manipulate each word individually.
+  // the variable words is assigned an array with each word from the sentence. The array is as follows ["we", "are", "neoGrammers"]
+  console.log(words);
+
+  //🛑
+  // Now we will loop over the array of words and capitalize the first letter of each word.
+  for (let i = 0; i < words.length; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].substr(1)
+  }
+  // In the above code, every word is taken separately. Then it capitalizes the first letter, and in the end, it concatenates the capitalized first letter with the rest of the string.
+  // E.G If we take "neogCamp" as an example,
+  // it looks like this neogCamp = N + eogCamp
+  // console.log(words)
+
+  // 🛑
+  //  Now we'll join all the words to form a sentence.
+  // In JavaScript, we have a method called join, which we can use to return an array as a string. 
+  let capitalizeString = words.join(" ");
+  return capitalizeString;
+
+  //In the above code snippet, we can see the join method in action. We call it on the words array, and we specify the separator, which in our case is a space.
+
+  // Therefore, [ 'We', 'Are', 'NeoGrammers' ] becomes We Are NeoGrammers 
 }
-capitalize("yash"); // => Yash
-// slice()
-/*
-slice(indexStart)
-slice(indexStart, indexEnd)
 
-indexStart
-The index of the first character to include in the returned substring.
+console.log(capitalize("we are neoGrammers"))
 
-indexEnd Optional
-The index of the first character to exclude from the returned substring.
+
+//WHAT SUBSTR METHOD DOES
+/*let text = "Hello world!";
+let result = text.substr(1, 4);
+console.log(result);
+OUTPUT => ello
+
+The substr() method extracts a part of a string.
+
+The substr() method begins at a specified position, and returns a specified number of characters.
+
+The substr() method does not change the original string.
 */
+
+
 
 
 // 3️⃣Given an array of numbers, your function should return an array in the ascending order.
