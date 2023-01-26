@@ -55,7 +55,7 @@ function capitalize(sentence) {
   // Therefore, [ 'We', 'Are', 'NeoGrammers' ] becomes "We Are NeoGrammers"
 }
 
-console.log(capitalize("we are neoGrammers"))
+// console.log(capitalize("we are neoGrammers"))
 
 
 //WHAT SUBSTR METHOD DOES
@@ -77,6 +77,12 @@ The substr() method does not change the original string.
 // 3️⃣Given an array of numbers, your function should return an array in the ascending order.
 // Example:
 // Input: sortArray([100,83,32,9,45,61]) ––> Output: [9,32,45,61,83,100]
+
+function ascendingArr(arr) {
+  return arr.sort((a, b) => a - b);
+}
+console.log(ascendingArr([100, 83, 32, 9, 45, 61]))
+
 
 // 4️⃣Given a sentence, your function should reverse the order of characters in each word, keeping same sequence of words.
 // Example:
