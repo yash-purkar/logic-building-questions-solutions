@@ -90,7 +90,7 @@ function ascendingArr(arr) {
 function reverseCharactersOfWord(str) {
   return console.log(str.split("").reverse().join("").split(" ").reverse().join(" "))
 }
-reverseCharactersOfWord("we are neoGrammers")
+// reverseCharactersOfWord("we are neoGrammers")
 
 /*
     1. str.split("")
@@ -129,3 +129,8 @@ reverseCharactersOfWord("we are neoGrammers")
     return console.log(str.split("").reverse().join("").split("").join("").split(" ").reverse().join(" "))
 }
 reverseSentence("I am yash") */
+
+function reverseStr(string) {
+  return console.log(string.split("").reverse().join("").split(" ").reverse().join(" "))
+}
+reverseStr("yash purkar")
