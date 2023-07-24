@@ -67,7 +67,18 @@ The substr() method begins at a specified position, and returns a specified numb
 The substr() method does not change the original string.
 */
 
+const getCapitalized = (sentence) => {
+  const allWords = sentence.split(" ");
 
+  for (let i = 0; i < allWords.length; i++) {
+    let capitalizeWord = allWords[i][0].toUpperCase() + allWords[i].slice(1, allWords[i].length);
+
+    allWords[i] = capitalizeWord
+  }
+  return allWords.join(" ")
+}
+
+console.log(getCapitalized("we are neoGrammers"))
 
 
 // 3️⃣Given an array of numbers, your function should return an array in the ascending order.
@@ -132,3 +143,17 @@ function reverseStr(string) {
   return console.log(string.split("").reverse().join("").split(" ").reverse().join(" "))
 }
 reverseStr("yash purkar")
+
+const reverseCharactersOfWord = (sentence) => {
+  const arrOfWords = sentence.split(" ");
+  let newSentence = "";
+
+  for (let i = 0; i < arrOfWords.length; i++) {
+    const reverseSingleWord = arrOfWords[i].split("").reverse("").join("");
+    newSentence += reverseSingleWord + " ";
+  }
+
+  return newSentence;
+}
+
+console.log(reverseCharactersOfWord('we are neoGrammers'))
