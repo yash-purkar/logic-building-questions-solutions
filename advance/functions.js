@@ -2,22 +2,18 @@
 // Input: encodeString("neogcamp", 2) ––> Output: pgqiecor
 // Explanation: 2 represents shifting alphabets by 2 places. a –> c, b –> d, c –> e and so on.
 
-// Not solved
-
-/*function getSecretCode(str, n) {
-  // console.log(str.split(""))
-  // console.log(str.charCodeAt(5))
-  let asciiNums = []; let characters = ""
+const generateSecreteCode = (str) => {
+  let generatedCode = "";
+  // console.log(str.charCodeAt(0))
   for (let i = 0; i < str.length; i++) {
-    asciiNums.push(str.charCodeAt(i));
-    characters += String.fromCharCode(i)
+    const asciiVal = str.charCodeAt(i);
+    const updatedChar = String.fromCharCode(asciiVal + 2)
+    generatedCode = generatedCode + updatedChar;
   }
-  // console.log(asciiNums);
-  console.log(characters)
-  // let characters = String.fromCharCode(...asciiNums);
-  // console.log(characters)
+  return generatedCode
 }
-getSecretCode("Yash");*/
+
+console.log(generateSecreteCode("neogcamp"))
 
 
 
@@ -86,11 +82,11 @@ function ascendingArr(arr) {
 
 // 4️⃣Given a sentence, your function should reverse the order of characters in each word, keeping same sequence of words.
 // Example:
-// Input: reverseCharactersOfWord('we are neoGrammers') –––> Output: ew era sremmarGoen
+// Input: reverseCharactersOfWord('we are neoGrammers') –––> Output: ew era sremmarGoen   
 function reverseCharactersOfWord(str) {
   return console.log(str.split("").reverse().join("").split(" ").reverse().join(" "))
 }
-// reverseCharactersOfWord("we are neoGrammers")
+reverseCharactersOfWord("we are neoGrammers")
 
 /*
     1. str.split("")
@@ -120,6 +116,8 @@ function reverseCharactersOfWord(str) {
 5. str.split("").reverse().join("").split(" ").reverse()
 => [ 'ew', 'era', 'sremmarGoen' ]
 
+6. str.split("").reverse().join("").split(" ").reverse().join(" ")
+=> ew era sremmarGoen
 
 
 

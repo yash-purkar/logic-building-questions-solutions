@@ -34,3 +34,45 @@ const calculateKineticEnergy = () => {
   console.log(`Energy is : ${kEnergy}`)
 }
 calculateKineticEnergy();
+
+
+// 4️⃣Write a program to convert Fahrenheit to Celsius. For Fahrenheit to Celsius conversion use: C = (F - 32) * 5/9 'F' and 'C' are the temperatures on the Fahrenheit scale and Celsius scale respectively.
+
+// Input: 56
+// Output: 13.33333
+
+const fahrenheitToCelsius = () => {
+  let F = readlineSync.question("Fahrenheit : ");
+
+  let C = (F - 32) * 5 / 9
+  console.log(`Celsius : ${C.toFixed(3)}`)
+}
+
+fahrenheitToCelsius();
+
+
+// 5️⃣Calculate the area, perimeter of a square of side 'a'. Also, calculate the surface area and the volume of a cube of side 'a'.
+
+// Formula :
+
+// Area: a*a
+
+// Perimeter: 4*a
+
+// Surface Area: 6*a*a
+
+// Volume: a*a*a
+
+const calculateSquare = () => {
+  let side = readlineSync.question("Enter the side of a square : ");
+
+  let area = side * side;
+  let perimeter = 4 * side;
+  let surfaceArea = 6 * side * side;
+  let volume = side * side * side;
+
+  console.log(`Area : ${area}\nPerimeter : ${perimeter}\nSurface Area : ${surfaceArea}\n Volume : ${volume} `);
+
+}
+
+calculateSquare()
